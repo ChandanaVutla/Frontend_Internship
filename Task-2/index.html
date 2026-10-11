@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Chandana | Portfolio</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar">
+
+        <div class="logo">
+            CHANDANA<span>.</span>
+        </div>
+
+        <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#skills">Skills</a></li>
+            <li><a href="#projects">Projects</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+
+        <a href="#contact" class="nav-btn">Let's Talk</a>
+
+    </nav>
+
+
+    <!-- HERO -->
+    <section id="home" class="hero">
+
+        <div class="hero-content">
+
+            <p class="intro">HELLO, I'M</p>
+
+            <h2>
+                Chandana
+                <span>ECE Student & Developer</span>
+            </h2>
+
+            <p class="hero-text">
+                I am passionate about electronics, VLSI, FPGA-based
+                design and creating modern web experiences.
+            </p>
+
+            <div class="hero-buttons">
+
+                <a href="#projects" class="primary-btn">
+                    View My Work →
+                </a>
+
+                <a href="#contact" class="secondary-btn">
+                    Contact Me
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="hero-image">
+
+            <div class="profile-circle">
+                <div class="code-symbol">&lt;/&gt;</div>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- ABOUT -->
+    <section id="about" class="section about">
+
+        <div class="section-title">
+            <p>ABOUT ME</p>
+
+            <h2>
+                Turning ideas into
+                <span>real projects.</span>
+            </h2>
+        </div>
+
+        <div class="about-text">
+
+            <p>
+                I am an Electronics and Communication Engineering
+                student with an interest in digital electronics,
+                VLSI, FPGA and frontend development.
+            </p>
+
+            <p>
+                I enjoy understanding how hardware and software integrates the real<br>life solutions
+                and I keep developing practical projects that combine my perfect mix for hardware,
+                software and creativity.
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- SKILLS -->
+    <section id="skills" class="section skills-section">
+
+        <div class="section-title center">
+
+            <p>MY SKILLS</p>
+
+            <h2>Technologies I <span>Work With</span></h2>
+
+        </div>
+
+
+        <div class="skills-container">
+
+            <div class="skill-card">
+                <div class="skill-icon">01</div>
+                <h3>Java</h3>
+                <p>Programming & Problem Solving</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">02</div>
+                <h3>Verilog</h3>
+                <p>RTL & Digital Design</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">03</div>
+                <h3>FPGA</h3>
+                <p>FPGA Implementation</p>
+            </div>
+
+            <div class="skill-card">
+                <div class="skill-icon">04</div>
+                <h3>HTML, CSS & JavaScript</h3>
+                <p>Frontend Development</p>
+            </div>
+
+        </div>
+
+    </section>
+
+
+    <!-- PROJECTS -->
+    <section id="projects" class="section projects">
+
+        <div class="section-title center">
+
+            <p>MY WORK</p>
+
+            <h2>Featured <span>Projects</span></h2>
+
+        </div>
+
+
+        <div class="project-container">
+
+            <div class="project-card">
+
+                <div class="project-number">01</div>
+
+                <h3>RAM/ROM Memory Controller</h3>
+
+                <p>
+                    Designed and implemented a RAM/ROM emulation system on FPGA using Verilog and Xilinx Vivado, with real-time read/write displayed on a 16x2 LCD interfacing and corrected data across 30 test cases.
+                </p>
+
+                <span>VERILOG • FPGA • VIVADO • DIGITAL ELECTRONICS • RTL SYNTHESIS</span>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">02</div>
+
+                <h3>Weather Forecast Website</h3>
+
+                <p>
+                    Created a responsive weather application with
+                    dynamic weather information and user-friendly UI that gives the accurate data form the users location.
+                </p>
+
+                <span>HTML • CSS • JAVASCRIPT</span>
+
+            </div>
+
+
+            <div class="project-card">
+
+                <div class="project-number">03</div>
+
+                <h3>Aadhaar-based Smart Identity Verification and Authentication System</h3>
+
+                <p>
+                    Developed an Aadhaar-based identity verification platform using Python/Flask/Pandas and SQL, reducing manual verification steps by 80% and handling 400 test records with 70% validation accuracy.
+                </p>
+
+                <span>DBMS • SQL • PYTHON • FLASK • PANDAS</span>
+
+            </div>
+
+            <div class="project-card">
+
+                <div class="project-number">04</div>
+
+                <h3>HeartBeat Sensing</h3>
+
+                <p>
+                    Built a real-time heartbeat monitoring system with 80% accuracy using a pulse sensor and Arduino Uno, capturing BPM readings and health precautions based on live data.
+                </p>
+
+                <span>PULSE SENSOR • ARDUINO UNO • SMART DISPLAY</span>
+
+            </div>
+
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section id="contact" class="section contact">
+
+        <div class="section-title center">
+
+            <p>CONTACT ME</p>
+
+            <h2>Let's Work <span>Together</span></h2>
+
+        </div>
+
+
+        <form id="contactForm">
+
+            <input
+                type="text"
+                id="name"
+                placeholder="Your Name"
+                required
+            >
+
+            <input
+                type="email"
+                id="email"
+                placeholder="Your Email"
+                required
+            >
+
+            <textarea
+                id="message"
+                placeholder="Your Message"
+                rows="5"
+                required
+            ></textarea>
+
+            <button type="submit" class="primary-btn">
+                Send Message →
+            </button>
+
+        </form>
+
+        <p id="formMessage"></p>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="logo">
+            CHANDANA<span>.</span>
+        </div>
+
+        <p>
+            © 2026 Chandana. All Rights Reserved.
+        </p>
+
+    </footer>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
