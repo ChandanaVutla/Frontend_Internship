@@ -1,0 +1,189 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#0b1020">
+    <title>Atmos — Weather Dashboard</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <div class="ambient ambient-one"></div>
+    <div class="ambient ambient-two"></div>
+
+    <main class="app-shell">
+
+        <aside class="sidebar">
+            <a class="brand" href="#">
+                <span class="brand-icon">✳</span>
+                <span>atmos<span class="brand-dot">.</span></span>
+            </a>
+
+            <p class="side-label">YOUR WEATHER</p>
+
+            <button class="side-link active" type="button">
+                <span>◉</span> Overview
+            </button>
+
+            <div class="sidebar-bottom">
+                <div class="mini-weather">
+                    <span>✦</span>
+                    <p>Weather, beautifully simple.</p>
+                    <small>Powered by Open-Meteo</small>
+                </div>
+            </div>
+        </aside>
+
+        <section class="main-content">
+            <header class="topbar">
+                <div>
+                    <p class="eyebrow">WEATHER INTELLIGENCE</p>
+                    <h1>Good day<span class="accent">.</span></h1>
+                </div>
+
+                <form id="search-form" class="search-form">
+                    <span class="search-icon">⌕</span>
+                    <input
+                        id="city-input"
+                        type="search"
+                        placeholder="Search any city..."
+                        aria-label="Search city"
+                        required
+                    >
+                    <button id="search-btn" type="submit">Search</button>
+                </form>
+            </header>
+
+            <div class="status-line">
+                <span class="live-dot"></span>
+                <span id="message" role="status" aria-live="polite">
+                    Search for a city to explore its weather.
+                </span>
+            </div>
+
+            <section id="weather-section" class="hidden">
+
+                <article class="hero-card">
+                    <div class="hero-orb orb-one"></div>
+                    <div class="hero-orb orb-two"></div>
+
+                    <div class="hero-top">
+                        <div>
+                            <span class="pill"><span class="live-dot"></span> CURRENT WEATHER</span>
+                            <h2 id="location">Hyderabad, India</h2>
+                            <p id="date" class="hero-date">Local time</p>
+                        </div>
+
+                        <span id="hero-icon" class="hero-icon">☀️</span>
+                    </div>
+
+                    <div class="hero-bottom">
+                        <div>
+                            <div id="temperature" class="temperature">--°</div>
+                            <p id="description" class="weather-description">Clear sky</p>
+                            <p class="feels-label">
+                                Feels like <strong id="feels-like">--°C</strong>
+                            </p>
+                        </div>
+
+                        <div class="hero-note">
+                            <span class="note-icon">✧</span>
+                            <p>Your daily weather snapshot</p>
+                            <small>Stay ahead of the weather.</small>
+                        </div>
+                    </div>
+                </article>
+
+                <div class="section-heading">
+                    <div>
+                        <p class="eyebrow">AT A GLANCE</p>
+                        <h2>Today's highlights</h2>
+                    </div>
+                    <span class="section-count">01 — 04</span>
+                </div>
+
+                <div class="highlights-grid">
+                    <article class="highlight-card">
+                        <div class="card-top">
+                            <span class="card-icon humidity-icon">≋</span>
+                            <span class="card-label">HUMIDITY</span>
+                        </div>
+                        <h3 id="humidity">--<small>%</small></h3>
+                        <p>Relative humidity</p>
+                        <div class="meter"><span id="humidity-meter"></span></div>
+                    </article>
+
+                    <article class="highlight-card">
+                        <div class="card-top">
+                            <span class="card-icon wind-icon">↗</span>
+                            <span class="card-label">WIND SPEED</span>
+                        </div>
+                        <h3 id="wind">--<small> km/h</small></h3>
+                        <p>Wind at 10 metres</p>
+                        <div class="meter"><span id="wind-meter"></span></div>
+                    </article>
+
+                    <article class="highlight-card">
+                        <div class="card-top">
+                            <span class="card-icon rain-icon">⌁</span>
+                            <span class="card-label">PRECIPITATION</span>
+                        </div>
+                        <h3 id="precipitation">--<small> mm</small></h3>
+                        <p>Current precipitation</p>
+                        <div class="meter"><span id="rain-meter"></span></div>
+                    </article>
+
+                    <article class="highlight-card">
+                        <div class="card-top">
+                            <span class="card-icon temp-icon">⌁</span>
+                            <span class="card-label">CONDITIONS</span>
+                        </div>
+                        <h3 id="condition-short">--</h3>
+                        <p id="condition-note">Current conditions</p>
+                        <div class="condition-tag">LIVE WEATHER</div>
+                    </article>
+                </div>
+
+                <div class="section-heading forecast-heading">
+                    <div>
+                        <p class="eyebrow">PLAN AHEAD</p>
+                        <h2>5-day forecast</h2>
+                    </div>
+                    <span class="forecast-caption">Daily outlook</span>
+                </div>
+
+                <div id="forecast-grid" class="forecast-grid"></div>
+
+            </section>
+
+            <section id="empty-state" class="empty-state">
+                <div class="empty-art">
+                    <span class="empty-sun">☀</span>
+                    <span class="empty-cloud">☁</span>
+                    <span class="empty-spark">✦</span>
+                </div>
+                <h2>Your world, at a glance.</h2>
+                <p>Discover current conditions and the upcoming five-day forecast for any city.</p>
+                <div class="suggestions">
+                    <button type="button" class="city-chip" data-city="Hyderabad">Hyderabad ↗</button>
+                    <button type="button" class="city-chip" data-city="London">London ↗</button>
+                    <button type="button" class="city-chip" data-city="Tokyo">Tokyo ↗</button>
+                </div>
+            </section>
+
+            <footer class="footer">
+                <span>Made for the curious <span class="accent">✳</span></span>
+                <span>Weather data by <a href="https://open-meteo.com/" target="_blank" rel="noopener noreferrer">Open-Meteo</a></span>
+            </footer>
+        </section>
+    </main>
+</body>
+</html>
+
